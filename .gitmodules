@@ -1,0 +1,3 @@
+[submodule "SOURCES/ntpstat"]
+	path = SOURCES/ntpstat
+	url = https://github.com/arctiqtim/ntpstat.git
