@@ -121,7 +121,7 @@ This package contains NTP documentation in HTML format.
 %endif
 
 %prep
-%setup -q -a 2
+%setup -q -a 0
 
 # set default path to sntp KoD database
 sed -i 's|/var/db/ntp-kod|%{_localstatedir}/lib/sntp/kod|' sntp/{sntp.1sntpman,sntp.1sntpmdoc,main.c}
