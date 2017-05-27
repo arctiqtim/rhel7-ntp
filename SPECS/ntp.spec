@@ -121,12 +121,6 @@ This package contains NTP documentation in HTML format.
 %endif
 
 %prep
-
-# rm -rf ntpstat*
-# wget https://github.com/mlichvar/ntpstat/archive/master.zip
-# unzip master.zip
-# mv ntpstat-master ntpstat-0.2
-# tar -zcf ntpstat-0.2.tgz ntpstat-0.2
 %setup -q -a 5
 
 # set default path to sntp KoD database
@@ -187,7 +181,7 @@ mkdir -p $RPM_BUILD_ROOT%{_mandir}/man{5,8}
 # mv $RPM_BUILD_ROOT%{_mandir}/man{1/sntp.1,8/sntp.8}
 rm -rf $RPM_BUILD_ROOT%{_mandir}/man1
 
-pushd ntpstat-0.2
+pushd ntpstat
 mkdir -p $RPM_BUILD_ROOT%{_bindir}
 install -m 755 ntpstat $RPM_BUILD_ROOT%{_bindir}
 install -m 644 ntpstat.1 $RPM_BUILD_ROOT%{_mandir}/man8/ntpstat.8
