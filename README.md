@@ -10,7 +10,10 @@ This repository can be used to build a custom ntp package.  Ensure you have the 
 
 ## Usage
 
-Simply clone the repo, customize the SPEC file if required, and run rpmbuild -bb SPECS/ntp.spec
+Simply clone the repo, customize the SPEC file if required, and run:
+ln -s rhel7-ntp rpmbuild
+rpmbuild -bb rpmbuild/SPECS/ntp.spec
+
 Install the resulting RPMs
 
 ## Contributing

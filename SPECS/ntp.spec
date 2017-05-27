@@ -36,7 +36,7 @@ Source2: ntp.keys
 Source4: ntpd.sysconfig
 # https://github.com/mlichvar/ntpstat/archive/master.zip
 # replaced the old ntpstat with a shell script version that emulates functionality using ntpq
-Source5: ntpstat
+Source5: ntpstat.tgz
 Source6: ntp.step-tickers
 Source7: ntpdate.wrapper
 Source8: ntp.cryptopw
@@ -121,7 +121,7 @@ This package contains NTP documentation in HTML format.
 %endif
 
 %prep
-%setup -q -a 0
+%setup -q -a 5
 
 # set default path to sntp KoD database
 sed -i 's|/var/db/ntp-kod|%{_localstatedir}/lib/sntp/kod|' sntp/{sntp.1sntpman,sntp.1sntpmdoc,main.c}
